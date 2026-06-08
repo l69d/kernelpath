@@ -1,5 +1,12 @@
 import Link from "next/link";
-import { TRACKS, MODULES, TOTAL_MODULES, TOTAL_TRACKS } from "@/lib/modules";
+import {
+  TRACKS,
+  MODULES,
+  TOTAL_MODULES,
+  TOTAL_TRACKS,
+  PARTS,
+  tracksInPart,
+} from "@/lib/modules";
 import {
   contentCount,
   totalConcepts,
@@ -46,9 +53,13 @@ export default function Home() {
             </h1>
             <p className="mt-5 text-lg text-muted max-w-xl">
               An exhaustive, visual, and totally free roadmap — {TOTAL_MODULES}{" "}
-              modules across {TOTAL_TRACKS} tracks. Start with what a{" "}
-              <span className="text-text">bit</span> is. Finish by sending a
-              patch to the <span className="text-text">kernel mailing list</span>.
+              modules across {TOTAL_TRACKS} tracks. <b className="text-text">Part I</b>{" "}
+              takes you from what a <span className="text-text">bit</span> is to
+              sending a patch to the{" "}
+              <span className="text-text">Linux kernel</span>.{" "}
+              <b className="text-text">Part II</b> is a complete{" "}
+              <span className="text-text">MIT / Stanford CS degree</span> —
+              algorithms, theory, compilers, databases, networks, AI, and more.
               Every concept explained, visualized, and linked to the best
               resources on Earth.
             </p>
@@ -146,15 +157,28 @@ export default function Home() {
       </div>
 
       {/* ---------------- the path ---------------- */}
-      <div className="mx-auto max-w-6xl px-4 py-12 space-y-16">
+      <div className="mx-auto max-w-6xl px-4 py-12 space-y-20">
         {ready === 0 && (
           <div className="card p-4 text-sm text-amber/90">
             Module content is being authored by the build pipeline. Structure and
             navigation are live now.
           </div>
         )}
-        {TRACKS.map((t) => (
-          <TrackSection key={t.id} track={t} />
+        {PARTS.map((part) => (
+          <div key={part.id} className="space-y-14">
+            <div
+              id={`part-${part.id}`}
+              className="scroll-mt-28 border-b border-border pb-4"
+            >
+              <h2 className="text-2xl md:text-3xl font-black tracking-tight">
+                {part.title}
+              </h2>
+              <p className="text-muted mt-1">{part.tagline}</p>
+            </div>
+            {tracksInPart(part.id).map((t) => (
+              <TrackSection key={t.id} track={t} />
+            ))}
+          </div>
         ))}
       </div>
 

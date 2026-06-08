@@ -8,6 +8,7 @@ import SearchPalette from "@/components/SearchPalette";
 
 const LINKS = [
   { href: "/", label: "Roadmap" },
+  { href: "/sandbox", label: "Sandbox" },
   { href: "/progress", label: "Progress" },
   { href: "/about", label: "About" },
 ];

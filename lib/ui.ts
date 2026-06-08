@@ -13,6 +13,25 @@ export const TRACK_COLOR: Record<string, string> = {
   t9: "#bc8cff",
   t10: "#f778ba",
   t11: "#e3a93c",
+  // Part II — CS Core
+  cs0: "#58a6ff",
+  cs1: "#bc8cff",
+  cs2: "#3fb950",
+  cs3: "#39c5e0",
+  cs4: "#e3a93c",
+  cs5: "#f778ba",
+  cs6: "#58a6ff",
+  cs7: "#bc8cff",
+  cs8: "#3fb950",
+  cs9: "#39c5e0",
+  cs10: "#e3a93c",
+  cs11: "#f778ba",
+  cs12: "#58a6ff",
+  cs13: "#bc8cff",
+  cs14: "#3fb950",
+  cs15: "#39c5e0",
+  cs16: "#e3a93c",
+  cs17: "#f778ba",
 };
 
 export const TRACK_INDEX: Record<string, string> = {
@@ -28,6 +47,25 @@ export const TRACK_INDEX: Record<string, string> = {
   t9: "09",
   t10: "10",
   t11: "11",
+  // Part II — CS Core (continuous numbering 12–29)
+  cs0: "12",
+  cs1: "13",
+  cs2: "14",
+  cs3: "15",
+  cs4: "16",
+  cs5: "17",
+  cs6: "18",
+  cs7: "19",
+  cs8: "20",
+  cs9: "21",
+  cs10: "22",
+  cs11: "23",
+  cs12: "24",
+  cs13: "25",
+  cs14: "26",
+  cs15: "27",
+  cs16: "28",
+  cs17: "29",
 };
 
 export function trackColor(trackId: string): string {

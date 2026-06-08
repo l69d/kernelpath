@@ -28,6 +28,7 @@ export default function Footer() {
           </div>
           <ul className="space-y-2 text-muted">
             <li><Link href="/" className="hover:text-text">The Roadmap</Link></li>
+            <li><Link href="/sandbox" className="hover:text-text">The Sandbox</Link></li>
             <li><Link href="/progress" className="hover:text-text">Track Your Progress</Link></li>
             <li><Link href="/about" className="hover:text-text">About & How To Use</Link></li>
           </ul>
