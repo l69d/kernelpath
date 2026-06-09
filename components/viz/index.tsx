@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { CONCEPT_VIZ } from "./concepts/registry";
 
 /* ================================================================== *
  *  Hand-built interactive "hero" visualizations.
@@ -463,6 +464,7 @@ export function PatchLifecycleViz() {
 
 /* ---------------- registry ---------------- */
 export const VIZ: Record<string, React.ComponentType> = {
+  ...CONCEPT_VIZ,
   "t0-07": MemoryHierarchyViz,
   "t2-03": FetchExecuteViz,
   "t2-04": PipelineViz,

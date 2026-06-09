@@ -4,7 +4,7 @@ import { MODULES, TRACKS } from "@/lib/modules";
 const BASE = "https://kernelpath.vercel.app";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticRoutes = ["", "/about", "/progress", "/sandbox"].map((p) => ({
+  const staticRoutes = ["", "/about", "/progress", "/sandbox", "/contribute"].map((p) => ({
     url: `${BASE}${p}`,
     changeFrequency: "weekly" as const,
     priority: p === "" ? 1 : 0.6,
